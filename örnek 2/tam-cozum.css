@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* webkit-scrollbar sağda gözüken scroll çubuğunu gizlemeye yarar fakat işlevselliğini kaybetmez */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Viewport Height (vh)
+vh ise ekran yüksekliğinin 100/1'lik bir bölümüne denk geliyor. */
+.container{
+    background: url(../img/black-back.jpg);
+    height: 500vh;
+    background-size: 100% 100%;
+}
+
+.container .navbar{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    background: rgba(218, 145, 77, 0.4);
+}
+
+/* inline-block line'ın içerisindeki logo kısmını etkiler.sadece Block özelliği verirsek komple line ile birlikte etki etmesini sağlar. */
+.navbar .logo{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+    user-select: none;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 70px;
+}
+
+.navbar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    border-radius: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: .3s;
+}
+
+/* .navbar ul li a.active, bu sadece görseli ekranda gösterme amaçlı yazılan bir koddur. transition hareket kazandırma özelliğini veriyor imgelere.*/
+.navbar ul li a:hover{
+    background: #ff6e00;
+}
+
+.navbar .logo2 img{
+    display: inline-block;
+    height: 110px;
+    width: 140px;
+    position: absolute;
+    top: 11%;
+    left: 1%;transform: translate(-1%,-1%);
+    transition: .2s;
+    user-select: none;
+}
+/* transform: scale(1.1) resim üzerine geldiğinde resmin büyümesini sağlar */
+.navbar .logo2 img:hover{
+    transform: scale(1.2);
+}
+
+/* Yukardan ve soldan boşluk vereceğimiz için position:absolute verebiliriz. user-select: none; komutu ile kopyalanmasını istemediğin yazıları kullanıcılar seçemiyor*/
+.container .center{
+    /* position: absolute;
+    top: 30%;
+    left: 16%;transform: translate(-20%,-15%); */
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.center h1{
+    /* padding: 100px 500px; */
+    display: inline-block;
+    margin: 100px 600px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    width: 500px;
+    
+}
+
+.orta p{
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(5, 5, 5, 0.6);
+}
+
+.orta p a{
+    text-decoration: none;
+    color: rgb(255, 115, 0);
+}
+
+.orta img{
+    float: left;
+    margin-top: 20px;
+    margin-left: 450px;
+    display: block;
+    width: 640px;
+    border-radius: 10px;
+}
+
+.sagmenu img{
+    width: 400px;
+}
+
+.center h2{
+    color: aliceblue;
+    margin: 10px 200px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    text-shadow: 100px 70px 4px rgb(75, 75, 75, 0.7);
+    font-weight: lighter;
+    width: 400px;
+    display: block;
+    
+}
+
+.center h3{
+    display: block;
+    color: aliceblue;
+    margin: 30px 200px;
+    text-shadow: 50px 50px 4px rgb(75, 75, 75, 0.7);
+    font-size: 30px;
+    float: left;
+}
+
+.center h4{
+    display: block;
+    color: aliceblue;
+    margin: 10px -190px;
+    text-shadow: 50px 50px 4px rgb(75, 75, 75, 0.7);
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+    font-size: 60px;
+    float: left;
+}
+
+.center iframe{
+    display: block;
+    float: left;
+    margin: 350px -370px;
+}
+
+.center p{
+    margin-top: 45px;
+    margin-left: 400px;
+    width: 700px;
+    line-height: 30px;
+    text-align: justify;
+    float: left;
+    color: azure;
+    
+}
